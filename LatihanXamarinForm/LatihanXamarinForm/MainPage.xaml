@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Main Page"
+             x:Class="LatihanXamarinForm.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="menuAbsolut" Text="Contoh Absolut" 
+                     Order="Secondary" Clicked="menuAbsolut_Clicked" />
+        <ToolbarItem x:Name="menuGrid" Text="Contoh Grid" 
+                     Order="Secondary" Clicked="menuGrid_Clicked" />
+        <ToolbarItem x:Name="menuCalc" Text="Contoh Calc" 
+                     Order="Secondary" Clicked="menuCalc_Clicked" />
+        
+        
+        
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Button x:Name="btnSimpleList" Text="Simple List" 
+                Clicked="btnSimpleList_Clicked" />
+        <Button x:Name="btnBindingList" Text="Binding List" 
+                Clicked="btnBindingList_Clicked" />
+        <Button x:Name="btnImageList" Text="Image List" 
+                Clicked="btnImageList_Clicked" />
+        <Button x:Name="btnActionSheet" Text="Action Sheet" 
+                Clicked="btnActionSheet_Clicked" />
+        <Entry x:Name="entryLanguage" Placeholder="Insert Language" />
+        <Button x:Name="btnPreference" Text="Buat Preference"
+                Clicked="btnPreference_Clicked"/>
+        <Button x:Name="btnAmbilPreference" Text="Ambil Preference"
+                Clicked="btnAmbilPreference_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

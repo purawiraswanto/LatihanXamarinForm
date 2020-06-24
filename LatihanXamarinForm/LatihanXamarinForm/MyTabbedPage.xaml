@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Sample Tab"
+             x:Class="LatihanXamarinForm.MyTabbedPage"
+             xmlns:local="clr-namespace:LatihanXamarinForm">
+    <!--Pages can be added as references or inline-->
+    <TabbedPage.Children>
+        <local:ContohImageList Title="Image List" />
+        <ContentPage Title="Tab 1" >
+            <Label Text="Tab 1" FontSize="Large" TextColor="Red"/>
+        </ContentPage>
+        <ContentPage Title="Tab 2" >
+            <Label Text="Tab 2" FontSize="Large" TextColor="Green"/>
+        </ContentPage>
+        <ContentPage Title="Tab 3" >
+            <Label Text="Tab 3" FontSize="Large" TextColor="Blue"/>
+        </ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>

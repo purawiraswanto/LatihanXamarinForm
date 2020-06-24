@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Add Employee Data"
+             x:Class="LatihanXamarinForm.AddEmployeePage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="EMPLOYEE SETUP" FontSize="Medium"  FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0" 
+                   Grid.ColumnSpan="3"/>
+            
+            
+            <Label Text="Employee Name :" HorizontalTextAlignment="End"
+                   VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="1" />
+            <Entry x:Name="entryName" Placeholder="Insert Employee Name"
+                   Grid.Column="1" Grid.Row="1" VerticalTextAlignment="Center"/>
+
+            <Label Text="Designation :" HorizontalTextAlignment="End"
+                   VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="2" />
+            <Entry x:Name="entryDesignation" Placeholder="Insert Designation"
+                   Grid.Column="1" Grid.Row="2" VerticalTextAlignment="Center"/>
+
+            <Label Text="Department :" HorizontalTextAlignment="End"
+                   VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="3" />
+            <Entry x:Name="entryDepartment" Placeholder="Insert Department"
+                   Grid.Column="1" Grid.Row="3" VerticalTextAlignment="Center"/>
+
+            <Label Text="Qualification :" HorizontalTextAlignment="End"
+                   VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="4" />
+            <Entry x:Name="entryQualification" Placeholder="Insert Qualification"
+                   Grid.Column="1" Grid.Row="4" VerticalTextAlignment="Center"/>
+
+
+            <Button x:Name="btnTambah" Text="Tambah" Grid.Row="5" Grid.Column="1"
+                    Clicked="btnTambah_Clicked" />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

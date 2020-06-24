@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LatihanXamarinForm.ContohKalkulatorPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Label Text="Masukan Bilangan 1 :" FontSize="Medium" />
+            <Entry x:Name="entryBil1" Placeholder="masukan bilangan 1" Keyboard="Numeric" />
+            <Label Text="Masukan Bilangan 2 :" FontSize="Medium" />
+            <Entry x:Name="entryBil2" Placeholder="masukan bilangan 2" Keyboard="Numeric" />
+            <Label Text="Hasil :" FontSize="Medium" />
+            <Entry x:Name="entryHasil" IsEnabled="false" />
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnTambah" BackgroundColor="Aqua" Text="+" />
+                <Button x:Name="btnKurang" BackgroundColor="Orange" Text="-" />
+                <Button x:Name="btnKali" BackgroundColor="LightBlue" Text="x" />
+                <Button x:Name="btnBagi" BackgroundColor="LightGreen" Text="/" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

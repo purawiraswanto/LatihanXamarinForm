@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"  Title="Contoh Custom List"
+             x:Class="LatihanXamarinForm.ContohCustomList">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lvImage" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding Source}" WidthRequest="150"
+                                       VerticalOptions="Center" HorizontalOptions="Center" />
+                                <Label FontSize="Medium" Text="{Binding Title}" Grid.Row="0" Grid.Column="1" TextColor="Purple" />
+                                <Label Text="{Binding Description}" Grid.Row="1" Grid.Column="1" />
+                                <Label Text="{Binding Price}" Grid.Row="2" Grid.Column="1" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

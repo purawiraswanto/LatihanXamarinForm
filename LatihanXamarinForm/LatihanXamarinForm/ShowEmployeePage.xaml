@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Employee Master Page"
+             x:Class="LatihanXamarinForm.ShowEmployeePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lvEmployee" ItemTapped="lvEmployee_ItemTapped">
+                <ListView.Header>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Label Text="No" FontAttributes="Bold"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+                        <Label Text="Name" FontAttributes="Bold"
+                               VerticalTextAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+                        <Label Text="Department" FontAttributes="Bold"
+                               VerticalTextAlignment="Center" Grid.Column="2" Grid.Row="0"/>
+                        <Label Text="Qualification" FontAttributes="Bold"
+                               VerticalTextAlignment="Center" Grid.Column="3" Grid.Row="0"/>
+
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="120" />
+                                    <ColumnDefinition Width="80" />
+                                    <ColumnDefinition Width="100" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding EmpId}" 
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="0" />
+                                <Label Text="{Binding EmpName}" 
+                               VerticalTextAlignment="Center" Grid.Column="1" Grid.Row="0" />
+                                <Label Text="{Binding Department}" 
+                               VerticalTextAlignment="Center" Grid.Column="2" Grid.Row="0" />
+                                <Label Text="{Binding Qualification}"  
+                               VerticalTextAlignment="Center" Grid.Column="3" Grid.Row="0" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+                        <Button Text="Add Employee" Clicked="btnAddEmployee_Clicked" />
+                    </StackLayout>
+                </ListView.Footer>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
